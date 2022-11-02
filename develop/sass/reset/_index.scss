@@ -53,3 +53,12 @@ select {
     scroll-behavior: auto !important;
   }
 }
+// remove default styling for lists and anchor tags
+ul {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
