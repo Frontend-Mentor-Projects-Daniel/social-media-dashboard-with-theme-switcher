@@ -60,6 +60,7 @@ label {
 
 // themes
 // light theme (default)
+.light,
 :root:has(#light:checked) {
   --clr-bg: 0, 0%, 100%;
   --clr-top-bg-pattern: 225, 100%, 98%;
@@ -70,6 +71,7 @@ label {
 }
 
 // dark theme
+.dark,
 :root:has(#dark:checked) {
   --clr-bg: 230, 17%, 14%;
   --clr-top-bg-pattern: 232, 19%, 15%;
