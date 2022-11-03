@@ -1,15 +1,21 @@
 @use '../mixins/breakpoints' as *;
 
 .header {
-  //   position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 
-  &__background {
-  }
-
-  &__title {
-  }
+  margin-top: 2.25rem;
 
   &__toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-top: 1px solid hsl(var(--clr-line-1));
+    padding-top: 1rem;
+    width: 100%;
+
     .radio-switch {
       border: none;
       padding: 0;
@@ -92,6 +98,15 @@
 
   @include breakpoint(tablet) {
     & {
+      flex-direction: row;
+      gap: 0;
+      justify-content: space-between;
+
+      &__toggle {
+        border-top: none;
+        padding: 0;
+        width: auto;
+      }
     }
   }
 }

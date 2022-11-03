@@ -12,6 +12,7 @@
   --clr-dark-lighter: 232, 19%, 15%;
   --clr-ebony: 228, 28%, 20%;
   --clr-steel-grey: 228, 34%, 66%;
+  --clr-mud-black: 228, 25%, 27%;
   --clr-toggle-button-head-dark: 228, 28%, 20%;
   --clr-toggle-button-body-dark: linear-gradient(
     225deg,
@@ -40,6 +41,22 @@
 body {
   background-color: hsl(var(--clr-bg));
   font-family: 'Inter';
+  position: relative;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  transform: translateY(-2.5rem);
+
+  background-color: hsl(var(--clr-top-bg-pattern));
+  border-radius: 0px 0px 20px 20px;
+  height: 20vh;
+  margin: 0 auto;
+  max-width: 100rem;
+  z-index: -1;
 }
 
 h1,
@@ -92,6 +109,7 @@ label,
   --clr-toggle-label: var(--clr-toggle-label-light);
   --clr-toggle-button-head: var(--clr-toggle-button-head-light);
   --clr-toggle-button-body: var(--clr-toggle-button-body-light);
+  --clr-line-1: var(--clr-toggle-label-light);
 }
 
 // dark theme
@@ -104,4 +122,5 @@ label,
   --clr-toggle-label: var(--clr-steel-grey);
   --clr-toggle-button-head: var(--clr-toggle-button-head-dark);
   --clr-toggle-button-body: var(--clr-toggle-button-body-dark);
+  --clr-line-1: var(--clr-mud-black);
 }

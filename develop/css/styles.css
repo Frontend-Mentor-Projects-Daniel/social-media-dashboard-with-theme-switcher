@@ -93,6 +93,7 @@ a {
   --clr-dark-lighter: 232, 19%, 15%;
   --clr-ebony: 228, 28%, 20%;
   --clr-steel-grey: 228, 34%, 66%;
+  --clr-mud-black: 228, 25%, 27%;
   --clr-toggle-button-head-dark: 228, 28%, 20%;
   --clr-toggle-button-body-dark: linear-gradient(
     225deg,
@@ -117,6 +118,21 @@ a {
 body {
   background-color: hsl(var(--clr-bg));
   font-family: "Inter";
+  position: relative;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  transform: translateY(-2.5rem);
+  background-color: hsl(var(--clr-top-bg-pattern));
+  border-radius: 0px 0px 20px 20px;
+  height: 20vh;
+  margin: 0 auto;
+  max-width: 100rem;
+  z-index: -1;
 }
 
 h1,
@@ -163,6 +179,7 @@ label,
   --clr-toggle-label: var(--clr-toggle-label-light);
   --clr-toggle-button-head: var(--clr-toggle-button-head-light);
   --clr-toggle-button-body: var(--clr-toggle-button-body-light);
+  --clr-line-1: var(--clr-toggle-label-light);
 }
 
 :is(.dark, :root:has(#dark:checked)) {
@@ -174,6 +191,21 @@ label,
   --clr-toggle-label: var(--clr-steel-grey);
   --clr-toggle-button-head: var(--clr-toggle-button-head-dark);
   --clr-toggle-button-body: var(--clr-toggle-button-body-dark);
+  --clr-line-1: var(--clr-mud-black);
+}
+
+.center {
+  --measure: 90rem;
+  --gutters: clamp(
+    1.5625rem,
+    -1.452464788732394rem + 12.863849765258214vw,
+    10.125rem
+  );
+  box-sizing: content-box;
+  margin-inline: auto;
+  max-inline-size: var(--measure);
+  padding-inline-start: var(--gutters);
+  padding-inline-end: var(--gutters);
 }
 
 .sr-only {
@@ -188,6 +220,20 @@ label,
   border: 0 !important;
 }
 
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2.25rem;
+}
+.header__toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid hsl(var(--clr-line-1));
+  padding-top: 1rem;
+  width: 100%;
+}
 .header__toggle .radio-switch {
   border: none;
   padding: 0;
@@ -254,6 +300,18 @@ label,
 }
 .header__toggle input:last-of-type:checked ~ label:last-of-type {
   z-index: 1;
+}
+@media (min-width: 48em) {
+  .header {
+    flex-direction: row;
+    gap: 0;
+    justify-content: space-between;
+  }
+  .header__toggle {
+    border-top: none;
+    padding: 0;
+    width: auto;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,14 @@
+.center {
+  --measure: 90rem;
+  --gutters: clamp(
+    1.5625rem,
+    -1.452464788732394rem + 12.863849765258214vw,
+    10.125rem
+  );
+
+  box-sizing: content-box;
+  margin-inline: auto;
+  max-inline-size: var(--measure);
+  padding-inline-start: var(--gutters);
+  padding-inline-end: var(--gutters);
+}
