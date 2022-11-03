@@ -59,7 +59,7 @@
     }
 
     label:first-of-type:before {
-      background: #fff;
+      background: hsl(var(--clr-toggle-button-head));
       border: 1px solid #aaa;
       border-radius: 100%;
       position: absolute;
@@ -71,14 +71,14 @@
     }
 
     label:first-of-type:after {
-      background: #222;
+      background: var(--clr-toggle-button-body);
       border-radius: 1em;
       margin: 0 1em;
       transition: background 0.2s ease-in-out;
       width: 4em;
     }
     input:first-of-type:checked ~ label:first-of-type:after {
-      background: #2196f3;
+      background: hsl(var(--clr-toggle-button-body));
     }
 
     input:first-of-type:checked ~ label:first-of-type:before {
