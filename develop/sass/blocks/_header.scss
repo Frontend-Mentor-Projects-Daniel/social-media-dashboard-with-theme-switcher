@@ -1,0 +1,97 @@
+@use '../mixins/breakpoints' as *;
+
+.header {
+  //   position: relative;
+
+  &__background {
+  }
+
+  &__title {
+  }
+
+  &__toggle {
+    .radio-switch {
+      border: none;
+      padding: 0;
+      white-space: nowrap;
+    }
+
+    legend {
+      font-size: 2px;
+      opacity: 0;
+      position: absolute;
+    }
+
+    label {
+      display: inline-block;
+      line-height: 2;
+      position: relative;
+      z-index: 2;
+    }
+
+    input {
+      opacity: 0;
+      position: absolute;
+    }
+
+    label:first-of-type {
+      padding-right: 5em;
+    }
+
+    label:last-child {
+      margin-left: -4.25em;
+      padding-left: 5em;
+    }
+
+    .radio-switch:focus-within label:first-of-type:after {
+      box-shadow: 0 0 0 2px #fff, 0 0 0 4px #2196f3;
+    }
+
+    label:first-of-type:before,
+    label:first-of-type:after {
+      border: 1px solid #aaa;
+      content: '';
+      height: 2em;
+      overflow: hidden;
+      pointer-events: none;
+      position: absolute;
+      vertical-align: middle;
+    }
+
+    label:first-of-type:before {
+      background: #fff;
+      border: 1px solid #aaa;
+      border-radius: 100%;
+      position: absolute;
+      right: -0.075em;
+      transform: translateX(0em);
+      transition: transform 0.2s ease-in-out;
+      width: 2em;
+      z-index: 2;
+    }
+
+    label:first-of-type:after {
+      background: #222;
+      border-radius: 1em;
+      margin: 0 1em;
+      transition: background 0.2s ease-in-out;
+      width: 4em;
+    }
+    input:first-of-type:checked ~ label:first-of-type:after {
+      background: #2196f3;
+    }
+
+    input:first-of-type:checked ~ label:first-of-type:before {
+      transform: translateX(-2em);
+    }
+
+    input:last-of-type:checked ~ label:last-of-type {
+      z-index: 1;
+    }
+  }
+
+  @include breakpoint(tablet) {
+    & {
+    }
+  }
+}

@@ -14,7 +14,7 @@
 
     <link rel="stylesheet" href="./develop/css/styles.css" />
     <script src="./develop/js/script.js" defer></script>
-    <title>Frontend Mentor | [Challenge Name Here]</title>
+    <title>Frontend Mentor | Social Media Dashboard with Theme Switcher</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
@@ -28,39 +28,35 @@
     </style>
   </head>
   <body>
-    <form action="">
-      <input class="light" type="radio" id="light" name="theme" />
-      <input class="dark" type="radio" id="dark" name="theme" />
-    </form>
+    <header class="[ header ]">
+      <div class="[ header__background ]"></div>
 
-    <!-- top card -->
-    <li class="[ card ] [ grid ] [ bg-blue text-red ] [ md:bg-green ]">
-      <h2 class="[ card__header--image ]">Facebook Image</h2>
-      <p class="[ card__user ]"><a href="#">@nathanf</a></p>
+      <div class="[ header__title ]">
+        <h1 class="[ title ]">Social Media Dashboard</h1>
+        <p class="[ followers ]">
+          Total Followers: <span data-num-total-followers>23,004</span>
+        </p>
+      </div>
 
-      <p class="[ card__followers ]">
-        <span data-num-followers>1987</span>Followers
-      </p>
+      <form class="[ header__toggle theme__toggle ]">
+        <fieldset class="radio-switch">
+          <legend>Toggle Dark Mode</legend>
+          <input type="radio" id="light" name="theme" />
+          <label for="light">Light Mode</label>
 
-      <p class="[ card__daily-stat ]"><span data-num-stat>12</span> Today</p>
-    </li>
+          <input type="radio" id="dark" name="theme" />
+          <label for="dark">Dark Mode</label>
+        </fieldset>
+      </form>
+    </header>
 
-    <!-- bottom card -->
-    <li class="[ card ]">
-      <h2 class="[ card__header ]">Page Views</h2>
+    <main class="[ main ]"></main>
 
-      <div class="[ icon ]"><img src="" alt="" /></div>
-
-      <p data-number-overview>87</p>
-
-      <p class="[ card__daily-stat ]"><span data-num-percentage>3</span>%</p>
-    </li>
-
-    <div class="attribution">
+    <footer class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
       >. Coded by <a href="#">Daniel Arzanipour</a>.
-    </div>
+    </footer>
   </body>
 </html>
