@@ -363,32 +363,32 @@ label,
   padding-top: 2rem;
   padding-bottom: 1.5rem;
   position: relative;
+  overflow: hidden;
 }
-.large-cards .card:hover {
-  background-color: hsl(var(--clr-card-bg-hover));
-}
-.large-cards .card.facebook {
-  border-top: 3px solid hsl(var(--clr-facebook));
-}
-.large-cards .card.twitter {
-  border-top: 3px solid hsl(var(--clr-twitter));
-}
-.large-cards .card.instagram {
-  position: relative;
-}
-.large-cards .card.instagram::before {
+.large-cards .card::before {
   content: "";
   position: absolute;
   top: 0;
   right: 0;
   left: 0;
   z-index: 111;
-  background-image: linear-gradient(225deg, #df4896 0%, #ee877e 50.91%, #fdc366 100%);
   height: 3px;
   width: 100%;
 }
-.large-cards .card.youtube {
-  border-top: 3px solid hsl(var(--clr-youtube));
+.large-cards .card:hover {
+  background-color: hsl(var(--clr-card-bg-hover));
+}
+.large-cards .card.facebook::before {
+  background-color: hsl(var(--clr-facebook));
+}
+.large-cards .card.twitter::before {
+  background-color: hsl(var(--clr-twitter));
+}
+.large-cards .card.instagram::before {
+  background-image: linear-gradient(225deg, #df4896 0%, #ee877e 50.91%, #fdc366 100%);
+}
+.large-cards .card.youtube::before {
+  background-color: hsl(var(--clr-youtube));
 }
 .large-cards .card__top {
   display: flex;

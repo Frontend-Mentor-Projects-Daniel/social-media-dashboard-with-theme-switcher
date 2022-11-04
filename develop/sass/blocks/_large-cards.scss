@@ -11,44 +11,43 @@
     padding-top: 2rem;
     padding-bottom: 1.5rem;
     position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: 111;
+
+      height: 3px;
+      width: 100%;
+    }
 
     &:hover {
       background-color: hsl(var(--clr-card-bg-hover));
     }
 
-    &.facebook {
-      border-top: 3px solid hsl(var(--clr-facebook));
+    &.facebook::before {
+      background-color: hsl(var(--clr-facebook));
     }
 
-    &.twitter {
-      border-top: 3px solid hsl(var(--clr-twitter));
+    &.twitter::before {
+      background-color: hsl(var(--clr-twitter));
     }
 
-    &.instagram {
-      position: relative;
-
-      &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: 111;
-
-        background-image: linear-gradient(
-          225deg,
-          #df4896 0%,
-          #ee877e 50.91%,
-          #fdc366 100%
-        );
-
-        height: 3px;
-        width: 100%;
-      }
+    &.instagram::before {
+      background-image: linear-gradient(
+        225deg,
+        #df4896 0%,
+        #ee877e 50.91%,
+        #fdc366 100%
+      );
     }
 
-    &.youtube {
-      border-top: 3px solid hsl(var(--clr-youtube));
+    &.youtube::before {
+      background-color: hsl(var(--clr-youtube));
     }
 
     &__top {
