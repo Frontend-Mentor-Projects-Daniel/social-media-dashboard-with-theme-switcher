@@ -3,9 +3,6 @@
 .large-cards {
   position: relative;
 
-  .cards {
-  }
-
   .card {
     align-items: center;
 
@@ -28,21 +25,27 @@
     }
 
     &.instagram {
-      border-top: 3px solid red;
-    }
+      position: relative;
 
-    // &.instagram::before {
-    //   content: '';
-    //   position: absolute;
-    //   top: 0;
-    //   left: 0;
-    //   width: 100%;
-    //   height: 0.25rem;
-    //   z-index: 111;
-    //   border-width: 3px;
-    //   background-color: red;
-    //   border-top: 3px solid var(--clr-instagram);
-    // }
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 111;
+
+        background-image: linear-gradient(
+          225deg,
+          #df4896 0%,
+          #ee877e 50.91%,
+          #fdc366 100%
+        );
+
+        height: 3px;
+        width: 100%;
+      }
+    }
 
     &.youtube {
       border-top: 3px solid hsl(var(--clr-youtube));
@@ -52,9 +55,6 @@
       display: flex;
       align-items: center;
       gap: 0.5rem;
-
-      .card__header--image {
-      }
 
       .card__user {
         a::before {
@@ -108,8 +108,5 @@
         width: 8px;
       }
     }
-  }
-
-  @include breakpoint(tablet) {
   }
 }
