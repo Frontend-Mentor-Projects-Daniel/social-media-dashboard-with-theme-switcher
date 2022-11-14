@@ -71,7 +71,7 @@ You can find the live version of the site [here](https://symphonious-peony-1b3bf
 
 ## Author
 
-- [Portfolio Website](https://www.your-site.com)
+- [Portfolio Website](https://daniel-arzani-portfolio.netlify.app/)
 - [Frontend Mentor Profile](https://daniel-arzani-portfolio.netlify.app/)
 
 ## Acknowledgments
